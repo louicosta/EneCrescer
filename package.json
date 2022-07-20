@@ -1,0 +1,36 @@
+{
+  "name": "reprograma-enecrescer",
+  "version": "1.0.0",
+  "description": "API de projeto final REPROGRAMA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louicosta/EneCrescer.git"
+  },
+  "keywords": [],
+  "author": "Louise Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louicosta/EneCrescer/issues"
+  },
+  "homepage": "https://github.com/louicosta/EneCrescer#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.5",
+    "swagger-autogen": "^2.21.5",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19"
+  }
+}
