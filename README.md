@@ -1,0 +1,1 @@
+## Este projeto final em construção para a iniciativa {Reprograma}, trata-se de uma API com CRUD completo com um banco de dados com livros, filmes e desenhos infanto-juvenis em que o protagonista ou um dos personagens principais sejam pessoas negras. 
