@@ -8,8 +8,7 @@ const movieSchema = new mongoose.Schema({
   duration: { type: Number, required: true },
   whereWatch: { type: String, required: true },
   ageRating: { type: String },
-  synopsis: { type: String, required: true },
-  favorite: { type: Boolean }
+  synopsis: { type: String, required: true }
 });
 
 

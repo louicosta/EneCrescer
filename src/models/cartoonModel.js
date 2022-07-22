@@ -8,8 +8,7 @@ const cartoonSchema = new mongoose.Schema({
   durationEpisode: { type: Number, required: true },
   whereWatch: { type: String, required: true },
   ageRating: { type: String },
-  synopsis: { type: String, required: true },
-  favorite: { type: Boolean }
+  synopsis: { type: String, required: true }
 });
 
 

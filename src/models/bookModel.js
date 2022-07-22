@@ -7,8 +7,7 @@ const bookSchema = new mongoose.Schema({
   publishing: { type: String, required: true },
   pageNumber: { type: Number, required: true },
   ageRating: { type: String },
-  description: { type: String, required: true },
-  favorite: { type: Boolean }
+  description: { type: String, required: true }
 });
 
 
