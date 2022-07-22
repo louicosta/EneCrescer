@@ -9,7 +9,8 @@ const seriesSchema = new mongoose.Schema({
   whereWatch: { type: String, required: true },
   ageRating: { type: String },
   genre: { type: String },
-  synopsis: { type: String, required: true }
+  synopsis: { type: String, required: true },
+  favorite: { type: Boolean }
 });
 
 
