@@ -6,6 +6,6 @@ router.get("/", function (req, res) {
     title: "EneCrescer",
     version: "1.0.0"
   })
-})
+});
 
-module.exports = router
+module.exports = router;
