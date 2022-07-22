@@ -12,11 +12,13 @@ const findAllCatalog = async (req, res) => {
     const allCatalog = [await Cartoon.find()]
     allCatalog.push(await Movie.find())
     allCatalog.push(await Series.find())
-    allCatalog.push(await Book.find());
+    allCatalog.push(await Book.find())
     res.status(200).json(allCatalog);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-module.exports = findAllCatalog;
+module.exports = {
+  findAllCatalog
+};
