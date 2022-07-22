@@ -4,7 +4,8 @@
   "description": "API de projeto final REPROGRAMA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js",
+    "swagger-autogen": "node swagger.js"
   },
   "repository": {
     "type": "git",
