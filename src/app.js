@@ -13,10 +13,10 @@ const seriesRoutes = require('../src/routes/seriesRoutes.js');
 const userRoutes = require('../src/routes/userRoutes.js');
 
 const app = express();
-
-app.use('/documentacao-enecrescer', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(express.json());
 app.use(cors());
+
+app.use('/documentacao-enecrescer', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use('/', index);
 app.use(bookRoutes);
 app.use(catalogRoutes);
