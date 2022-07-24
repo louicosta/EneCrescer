@@ -47,9 +47,9 @@ const newMovie = async (req, res) => {
 
 const findAllMovies = async (req, res) => {
    try {
-    const allMovies = await Movie.find().populate('movies')
+    const allMovies = await Movie.find()
 
-    if (err) {
+    if (!allMovies) {
         return res.status(404).send('Not Found')
     }
       res.status(200).json(allMovies)

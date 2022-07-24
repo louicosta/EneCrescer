@@ -49,9 +49,9 @@ const newSerie = async (req, res) => {
 
 const findAllSeries = async (req, res) => {
    try {
-    const allSeries = await Serie.find().populate('series')
+    const allSeries = await Serie.find()
 
-    if (err) {
+    if (!allSeries) {
         return res.status(404).send('Not Found')
     }
       res.status(200).json(allSeries)

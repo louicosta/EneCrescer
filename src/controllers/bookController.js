@@ -45,9 +45,9 @@ const newBook = async (req, res) => {
 
 const findAllBooks = async (req, res) => {
    try {
-    const allBooks = await Book.find().populate('books')
+    const allBooks = await Book.find()
 
-    if (err) {
+    if (!allBooks) {
         return res.status(404).send('Not Found')
     }
       res.status(200).json(allBooks)
@@ -60,7 +60,7 @@ const findAllBooks = async (req, res) => {
 const findBookById = async(req, res) => {
   try {
 
-    const findBook = await Book.findById(req.params.id).populate('books')
+    const findBook = await Book.findById(req.params.id)
 
      if (findBook == null) {
       return res.status(404).json({ message: "ID book not found"})
@@ -75,7 +75,8 @@ const findBookById = async(req, res) => {
 const findBookByTitle = async(req, res) => {
     try {
 
-      const findBook = await Book.findOne(req.query.title).populate('books')
+      const { title } = req.query
+      const findBook = await Book.find({ title:title })
 
        if (findBook == null) {
         return res.status(404).json({ message: "Title not found"})

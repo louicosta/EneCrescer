@@ -47,9 +47,9 @@ const newCartoon = async (req, res) => {
 
 const findAllCartoons = async (req, res) => {
    try {
-    const allCartoons = await Cartoon.find().populate('cartoons')
+    const allCartoons = await Cartoon.find()
 
-    if (err) {
+    if (!allCartoons) {
         return res.status(404).send('Not Found')
     }
       res.status(200).json(allCartoons)
