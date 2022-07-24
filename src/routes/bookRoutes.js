@@ -4,7 +4,7 @@ const controller = require('../controllers/bookController');
 
 
 router.get("/books", controller.findAllBooks)
-router.get("/book/:title", controller.findBookByTitle)
+router.get("/book/title", controller.findBookByTitle)
 router.get("/book/:id", controller.findBookById)
 router.post("/books/registration", controller.newBook)
 router.patch("/book/update/:id", controller.updateBookById)
