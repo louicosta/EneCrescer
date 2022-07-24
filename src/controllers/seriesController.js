@@ -64,7 +64,7 @@ const findAllSeries = async (req, res) => {
 const findSerieById = async(req, res) => {
   try {
 
-    const findSerie = await Serie.findById(req.params.id).populate('series')
+    const findSerie = await Serie.findById(req.params.id)
 
      if (findSerie == null) {
       return res.status(404).json({ message: "ID serie not found"})
@@ -79,7 +79,8 @@ const findSerieById = async(req, res) => {
 const findSerieByTitle = async(req, res) => {
     try {
 
-      const findSerie = await Serie.findOne(req.query.title).populate('series')
+      const { title } = req.query
+      const findSerie = await Serie.find({ title: title }).populate('series')
 
        if (findSerie == null) {
         return res.status(404).json({ message: "Title not found"})
@@ -94,8 +95,8 @@ const findSerieByTitle = async(req, res) => {
 const findSerieByAge = async (req, res) => {
     try {
 
-        const findSerie = await Serie
-          .findOne(req.query.ageRating).populate('series')
+        const { age } = req.query
+        const findSerie = await Serie.find({ ageRating: age }).populate('series')
 
          if (findSerie == null) {
           return res.status(404).json({ message: "Not found"})

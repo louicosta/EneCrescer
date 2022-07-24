@@ -62,7 +62,7 @@ const findAllMovies = async (req, res) => {
 const findMovieById = async(req, res) => {
   try {
 
-    const findMovie = await Movie.findById(req.params.id).populate('movies')
+    const findMovie = await Movie.findById(req.params.id)
 
      if (findMovie == null) {
       return res.status(404).json({ message: "ID movie not found"})
@@ -77,7 +77,8 @@ const findMovieById = async(req, res) => {
 const findMovieByTitle = async(req, res) => {
     try {
 
-      const findMovie = await Movie.findOne(req.query.title).populate('movies')
+      const { title } = req.query
+      const findMovie = await Movie.find({title: title})
 
        if (findMovie == null) {
         return res.status(404).json({ message: "Title not found"})
@@ -92,8 +93,8 @@ const findMovieByTitle = async(req, res) => {
 const findMovieByAge = async (req, res) => {
     try {
 
-        const findMovie = await Movie
-          .findOne(req.query.ageRating).populate('movies')
+      const { age } = req.query
+        const findMovie = await Movie.find({ageRating: age })
 
          if (findMovie == null) {
           return res.status(404).json({ message: "Not found"})
