@@ -62,7 +62,7 @@ const findAllCartoons = async (req, res) => {
 const findCartoonById = async(req, res) => {
   try {
 
-    const findCartoon = await Cartoon.findById(req.params.id).populate('cartoons')
+    const findCartoon = await Cartoon.findById(req.params.id)
 
      if (findCartoon == null) {
       return res.status(404).json({ message: "ID cartoon not found"})
@@ -77,7 +77,9 @@ const findCartoonById = async(req, res) => {
 const findCartoonByTitle = async(req, res) => {
     try {
 
-      const findCartoon = await Cartoon.findOne(req.query.title).populate('cartoons')
+      
+      const { title } = req.query
+      const findCartoon = await Cartoon.find({ title: title })
 
        if (findCartoon == null) {
         return res.status(404).json({ message: "Title not found"})
@@ -92,8 +94,8 @@ const findCartoonByTitle = async(req, res) => {
 const findCartoonByAge = async (req, res) => {
     try {
 
-        const findCartoon = await Cartoon
-          .findOne(req.query.ageRating).populate('cartoons')
+        const { age } = req.query
+        const findCartoon = await Cartoon.find({ageRating: age})
 
          if (findCartoon == null) {
           return res.status(404).json({ message: "Not found"})
