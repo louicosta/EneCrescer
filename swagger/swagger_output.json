@@ -39,16 +39,10 @@
         }
       }
     },
-    "/book/{title}": {
+    "/book/title": {
       "get": {
         "description": "",
         "parameters": [
-          {
-            "name": "title",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "title",
             "in": "query",
@@ -261,16 +255,10 @@
         }
       }
     },
-    "/cartoon/{title}": {
+    "/cartoon/title": {
       "get": {
         "description": "",
         "parameters": [
-          {
-            "name": "title",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "title",
             "in": "query",
@@ -290,18 +278,12 @@
         }
       }
     },
-    "/cartoos/{ageRating}": {
+    "/cartoons/age": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "ageRating",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "ageRating",
+            "name": "age",
             "in": "query",
             "type": "string"
           }
@@ -501,16 +483,10 @@
         }
       }
     },
-    "/movie/{title}": {
+    "/movie/title": {
       "get": {
         "description": "",
         "parameters": [
-          {
-            "name": "title",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "title",
             "in": "query",
@@ -530,18 +506,12 @@
         }
       }
     },
-    "/movie/{ageRating}": {
+    "/movie/age": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "ageRating",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "ageRating",
+            "name": "age",
             "in": "query",
             "type": "string"
           }
@@ -781,7 +751,7 @@
             "type": "string"
           },
           {
-            "name": "ageRating",
+            "name": "age",
             "in": "query",
             "type": "string"
           }
@@ -970,7 +940,7 @@
         }
       }
     },
-    "/registration/": {
+    "/registration": {
       "post": {
         "description": "",
         "parameters": [
@@ -997,7 +967,7 @@
         }
       }
     },
-    "/search/": {
+    "/search": {
       "get": {
         "description": "",
         "parameters": [],
@@ -1032,7 +1002,7 @@
         }
       }
     },
-    "/login/": {
+    "/login": {
       "post": {
         "description": "",
         "parameters": [
