@@ -74,14 +74,17 @@ const findCartoonById = async (req, res) => {
 
 const findCartoonByTitle = async (req, res) => {
   try {
-    const { title } = req.query;
-    const findCartoon = await Cartoon.find({ title: title });
+    const titleRequest = req.query.title;
 
-    if (findCartoon == null) {
+    const findCartoon = await Cartoon.find({
+      title: { $regex: titleRequest, $options: "i" },
+    });
+
+    if (findCartoon.length > 0) {
+      res.status(200).json(findCartoon);
+    } else {
       return res.status(404).json({ message: "Title not found" });
     }
-
-    res.status(200).json(findCartoon);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -175,11 +178,9 @@ const deleteCartoonById = async (req, res) => {
 
     await findCartoon.remove();
 
-    res
-      .status(200)
-      .json({
-        message: `The cartoon ${findCartoon.title} was successfully deleted`,
-      });
+    res.status(200).json({
+      message: `The cartoon ${findCartoon.title} was successfully deleted`,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

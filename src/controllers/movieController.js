@@ -74,14 +74,16 @@ const findMovieById = async (req, res) => {
 
 const findMovieByTitle = async (req, res) => {
   try {
-    const { title } = req.query;
-    const findMovie = await Movie.find({ title: title });
+    const titleRequest = req.query.title;
+    const findMovie = await Movie.find({
+      title: { $regex: titleRequest, $options: "i" },
+    });
 
-    if (findMovie == null) {
+    if (findMovie.length > 0) {
+      res.status(200).json(findMovie);
+    } else {
       return res.status(404).json({ message: "Title not found" });
     }
-
-    res.status(200).json(findMovie);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -173,11 +175,9 @@ const deleteMovieById = async (req, res) => {
 
     await findMovie.remove();
 
-    res
-      .status(200)
-      .json({
-        message: `The movie ${findMovie.title} was successfully deleted`,
-      });
+    res.status(200).json({
+      message: `The movie ${findMovie.title} was successfully deleted`,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

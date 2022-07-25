@@ -66,14 +66,17 @@ const findBookById = async (req, res) => {
 
 const findBookByTitle = async (req, res) => {
   try {
-    const { title } = req.query;
-    const findBook = await Book.find({ title: title });
+    const titleRequest = req.query.title;
 
-    if (findBook == null) {
+    const findBook = await Book.find({
+      title: { $regex: titleRequest, $options: "i" },
+    });
+
+    if (findBook.length > 0) {
+      res.status(200).json(findBook);
+    } else {
       return res.status(404).json({ message: "Title not found" });
     }
-
-    res.status(200).json(findBook);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

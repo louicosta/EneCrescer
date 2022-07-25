@@ -76,14 +76,16 @@ const findSerieById = async (req, res) => {
 
 const findSerieByTitle = async (req, res) => {
   try {
-    const { title } = req.query;
-    const findSerie = await Serie.find({ title: title });
+    const titleRequest = req.query.title;
+    const findSerie = await Serie.find({
+      title: { $regex: titleRequest, $options: "i" },
+    });
 
-    if (findSerie == null) {
+    if (findSerie.length > 0) {
+      res.status(200).json(findSerie);
+    } else {
       return res.status(404).json({ message: "Title not found" });
     }
-
-    res.status(200).json(findSerie);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -177,11 +179,9 @@ const deleteSeriesById = async (req, res) => {
 
     await findSerie.remove();
 
-    res
-      .status(200)
-      .json({
-        message: `The serie ${findSerie.title} was successfully deleted`,
-      });
+    res.status(200).json({
+      message: `The serie ${findSerie.title} was successfully deleted`,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
