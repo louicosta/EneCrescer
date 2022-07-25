@@ -3,195 +3,192 @@ const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
 
 const newMovie = async (req, res) => {
-   try {
-
-    const authHeader = req.get('authorization')
+  try {
+    const authHeader = req.get("authorization");
 
     if (!authHeader) {
-      return res.status(401).send('You need authorization to access')
+      return res.status(401).send("You need authorization to access");
     }
 
-    const token = authHeader.split(' ') [1]
+    const token = authHeader.split(" ")[1];
 
     await jwt.verify(token, SECRET, async function (err) {
-
       if (err) {
-        return res.status(403).send('Denied access')
-    }
-     const { title,
-             director,
-             producer, 
-             duration, 
-             whereWatch, 
-             ageRating,
-             synopsis } = req.body
-
-     const newMovie = new Movie({
+        return res.status(403).send("Denied access");
+      }
+      const {
         title,
-             director,
-             producer, 
-             duration, 
-             whereWatch, 
-             ageRating,
-             synopsis
-              })
+        director,
+        producer,
+        duration,
+        whereWatch,
+        ageRating,
+        synopsis,
+      } = req.body;
 
-              const savedMovie = await newMovie.save()
-              res.status(201).json(savedMovie)
-            })
-           } catch (error) {
-             console.error(error)
-             res.status(500).json({ message: error.message })
-           }
-};
+      const newMovie = new Movie({
+        title,
+        director,
+        producer,
+        duration,
+        whereWatch,
+        ageRating,
+        synopsis,
+      });
 
-const findAllMovies = async (req, res) => {
-   try {
-    const allMovies = await Movie.find()
-
-    if (!allMovies) {
-        return res.status(404).send('Not Found')
-    }
-      res.status(200).json(allMovies)
-} catch (error) {
-
-        res.status(500).json({ message: error.message})
-       }
-};
-
-const findMovieById = async(req, res) => {
-  try {
-
-    const findMovie = await Movie.findById(req.params.id)
-
-     if (findMovie == null) {
-      return res.status(404).json({ message: "ID movie not found"})
-     }
-
-      res.status(200).json(findMovie)
+      const savedMovie = await newMovie.save();
+      res.status(201).json(savedMovie);
+    });
   } catch (error) {
-    res.status(500).json({ message: error.message})
+    console.error(error);
+    res.status(500).json({ message: error.message });
   }
 };
 
-const findMovieByTitle = async(req, res) => {
-    try {
+const findAllMovies = async (req, res) => {
+  try {
+    const allMovies = await Movie.find();
 
-      const { title } = req.query
-      const findMovie = await Movie.find({title: title})
-
-       if (findMovie == null) {
-        return res.status(404).json({ message: "Title not found"})
-       }
-
-        res.status(200).json(findMovie)
-    } catch (error) {
-      res.status(500).json({ message: error.message})
+    if (!allMovies) {
+      return res.status(404).send("Not Found");
     }
+    res.status(200).json(allMovies);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const findMovieById = async (req, res) => {
+  try {
+    const findMovie = await Movie.findById(req.params.id);
+
+    if (findMovie == null) {
+      return res.status(404).json({ message: "ID movie not found" });
+    }
+
+    res.status(200).json(findMovie);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const findMovieByTitle = async (req, res) => {
+  try {
+    const { title } = req.query;
+    const findMovie = await Movie.find({ title: title });
+
+    if (findMovie == null) {
+      return res.status(404).json({ message: "Title not found" });
+    }
+
+    res.status(200).json(findMovie);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
 const findMovieByAge = async (req, res) => {
-    try {
+  try {
+    const { age } = req.query;
+    const findMovie = await Movie.find({ ageRating: age });
 
-      const { age } = req.query
-        const findMovie = await Movie.find({ageRating: age })
+    if (findMovie == null) {
+      return res.status(404).json({ message: "Not found" });
+    }
 
-         if (findMovie == null) {
-          return res.status(404).json({ message: "Not found"})
-         }
-
-          res.status(200).json(findMovie)
-      } catch (error) {
-        res.status(500).json({ message: error.message})
-      }
+    res.status(200).json(findMovie);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
 const updateMovieById = async (req, res) => {
   try {
-
-    const authHeader = req.get('authorization')
+    const authHeader = req.get("authorization");
 
     if (!authHeader) {
-      return res.status(401).send('You need authorization')
+      return res.status(401).send("You need authorization");
     }
 
-    const token = authHeader.split(' ') [1]
+    const token = authHeader.split(" ")[1];
 
     await jwt.verify(token, SECRET, async function (err) {
-
       if (err) {
-        return res.status(403).send('Denied access')
-    }
-  })
-    const { id } = req.params
-    const { 
-        title,
-        director,
-        producer, 
-        duration, 
-        whereWatch, 
-        ageRating,
-        synopsis } = req.body
+        return res.status(403).send("Denied access");
+      }
+    });
+    const { id } = req.params;
+    const {
+      title,
+      director,
+      producer,
+      duration,
+      whereWatch,
+      ageRating,
+      synopsis,
+    } = req.body;
 
-    const findMovie = await Movie.findById(id)
+    const findMovie = await Movie.findById(id);
     if (findMovie == null) {
-      return res.status(404).json({ message: "Movie not found"})
+      return res.status(404).json({ message: "Movie not found" });
     }
 
-    findMovie.title = title || findMovie.title
-    findMovie.director = director || findMovie.director
-    findMovie.producer = producer || findMovie.producer
-    findMovie.duration = duration || findMovie.duration
-    findMovie.whereWatch = whereWatch || findMovie.whereWatch
-    findMovie.ageRating = ageRating || findMovie.ageRating
-    findMovie.synopsis = synopsis || findMovie.synopsis
+    findMovie.title = title || findMovie.title;
+    findMovie.director = director || findMovie.director;
+    findMovie.producer = producer || findMovie.producer;
+    findMovie.duration = duration || findMovie.duration;
+    findMovie.whereWatch = whereWatch || findMovie.whereWatch;
+    findMovie.ageRating = ageRating || findMovie.ageRating;
+    findMovie.synopsis = synopsis || findMovie.synopsis;
 
-    const savedMovie = await findMovie.save()
-    res.status(200).json(savedMovie)
+    const savedMovie = await findMovie.save();
+    res.status(200).json(savedMovie);
   } catch (error) {
-    console.error(error)
-    res.status(500).json({ message: error.message })
+    console.error(error);
+    res.status(500).json({ message: error.message });
   }
 };
 
 const deleteMovieById = async (req, res) => {
-    try {
-        const authHeader = req.get('authorization')
+  try {
+    const authHeader = req.get("authorization");
 
     if (!authHeader) {
-      return res.status(401).send('You need authorization')
+      return res.status(401).send("You need authorization");
     }
 
-    const token = authHeader.split(' ') [1]
+    const token = authHeader.split(" ")[1];
 
     await jwt.verify(token, SECRET, async function (err) {
-
       if (err) {
-        return res.status(403).send('Denied access')
-    }
-    })
-      const { id } = req.params;
-      const findMovie = await Movie.findByIdAndDelete(id);
-  
-      if (findMovie == null) {
-        return res.status(404).json({ message: `ID movie ${id} not found` });
+        return res.status(403).send("Denied access");
       }
-  
-      await findMovie.remove();
-  
-      res.status(200).json({ message: `The movie ${findMovie.title} was successfully deleted` });
-  
-    } catch (error) {
-      res.status(500).json({ message: error.message });
+    });
+    const { id } = req.params;
+    const findMovie = await Movie.findByIdAndDelete(id);
+
+    if (findMovie == null) {
+      return res.status(404).json({ message: `ID movie ${id} not found` });
     }
+
+    await findMovie.remove();
+
+    res
+      .status(200)
+      .json({
+        message: `The movie ${findMovie.title} was successfully deleted`,
+      });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
 module.exports = {
-   newMovie,
-   findAllMovies,
-   findMovieById,
-   findMovieByTitle,
-   findMovieByAge,
-   updateMovieById,
-   deleteMovieById
+  newMovie,
+  findAllMovies,
+  findMovieById,
+  findMovieByTitle,
+  findMovieByAge,
+  updateMovieById,
+  deleteMovieById,
 };
