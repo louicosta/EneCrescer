@@ -2,7 +2,7 @@ const Book = require('../src/models/bookModel')
 
 describe("Testing book schema", () => {
   const books = new Book({
-    id: "7",
+    id: "62ddd316e59f300b7e3acbd6",
     title: "Book test",
     author: "The author",
     publishing: "The publisher",

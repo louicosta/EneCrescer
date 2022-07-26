@@ -2,7 +2,7 @@ const Movie = require('../src/models/movieModel')
 
 describe("Testing movie schema", () => {
   const movies = new Movie({
-  id: "15",
+  id: "29ddd316e95f300b7e3acbd6",
   title: "The Movie",
   director: "The director",
   producer: "The real director",

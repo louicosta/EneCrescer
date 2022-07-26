@@ -2,7 +2,7 @@ const Serie = require('../src/models/seriesModel')
 
 describe("Testing serie schema", () => {
   const series = new Serie({
-  id: "10",
+  id: "62ddd316e95f300b7e3acbd6",
   title: "The Serie",
   producer: "The producer",
   originalBroadcaster: "The real original broadcaster",

@@ -2,7 +2,7 @@ const Cartoon = require('../src/models/cartoonModel')
 
 describe("Testing cartoon schema", () => {
   const cartoons = new Cartoon({
-  id: "30",
+  id: "36ddd316e95f300b7e3acbd6",
   title: "The Cartoon",
   creator: "The creator",
   originalBroadcaster: "The original broadcaster",
