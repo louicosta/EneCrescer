@@ -2,7 +2,7 @@ const User = require('../src/models/userModel')
 
 describe("Testing user schema", () => {
   const users = new User({
-    id: 29,
+    id: "29",
     name: "Test Driver",
     email: "testdriver@email.com",
     password: "testpassword"
