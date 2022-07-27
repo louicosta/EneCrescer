@@ -1,7 +1,7 @@
 <h1 align="center">
 
 <p align="center">
-<img src= "imagem\enecrescer.gif" width="50%" height="30%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298093-890c61bd-09ca-47d1-97c9-bfe84e7bfeb2.gif" width="50%" height="30%"/>
 </p>
 
 <p align="center"><b> EneCrescer </b> 🖤✊🏿 <p>
@@ -143,7 +143,7 @@ Lembre-se que a arquitetura ao final do projeto precisa ficar exatamente dessa m
 <h1 align="center">
 
 <p align="center">
-<img src= "imagem\lets-go.gif" width="500px" height="150"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298279-6077c500-ca49-42af-9ae6-a93ac8ce4ca4.gif" width="500px" height="150"/>
 </p>
 
 ## 👩🏾‍🔧 Instalação
@@ -178,7 +178,7 @@ $ npm start
 ▫️ Rota de criação de usuário
 <br>
 
-<img src= "imagem\post-user.jpg" width="70%" height="40%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298415-7191f2ab-1e6d-449a-a7b8-e48fe6e28f23.jpg" width="70%" height="40%"/>
 </p>
 
 <br>
@@ -186,7 +186,7 @@ $ npm start
 ▫️ Rota que retorna todos os livros do catálogo
 <br>
 
-<img src= "imagem\get-all-livros.jpg" width="70%" height="40%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298594-1f82d305-0faf-4ef3-9499-8add1ae142d7.jpg" width="70%" height="40%"/>
 </p>
 
 <br>
@@ -194,7 +194,7 @@ $ npm start
 ▫️ Rota que retorna a série por título
 <br>
 
-<img src= "imagem\get-por-titulo.jpg" width="70%" height="40%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298692-e9fc8bbc-b48b-4db6-be93-4162b5b5b53e.jpg" width="70%" height="40%"/>
 </p>
 
 <br>
@@ -202,7 +202,7 @@ $ npm start
 ▫️ Rota que altera alguma propriedade do desenho
 <br>
 
-<img src= "imagem\patch-de-desenho.jpg" width="70%" height="40%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181298811-37b60b6f-0d49-4e93-a933-8b763319be9b.jpg" width="70%" height="40%"/>
 </p>
 
 <br>
@@ -332,7 +332,7 @@ Agradecimento ao meu esposo, minha família, a Jani, nossa facilitadora maravilh
 </span>
 
 <p align="center">
-<img src= "imagem\giphy.gif" width="50%" height="30%"/>
+<img src= "https://user-images.githubusercontent.com/101025726/181297727-d648b4ab-ad20-4d4c-832b-00d9638abfff.gif" width="50%" height="30%"/>
 </p>
 
 
@@ -342,7 +342,7 @@ Agradecimento ao meu esposo, minha família, a Jani, nossa facilitadora maravilh
 
 <p align="center">
 <a>
- <img style="border-radius: 50%;" src="imagem\foto-perfil.jpg" width="100px;" alt="Foto de Perfil de Louise"/>
+ <img style="border-radius: 50%;" src="https://user-images.githubusercontent.com/101025726/181299021-46508a68-9041-46bd-a849-e91a7308b364.jpg" width="100px;" alt="Foto de Perfil de Louise"/>
  <br/>
 </a>
 </p>
