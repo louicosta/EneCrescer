@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const cartoonSchema = new mongoose.Schema({
-  id: { type: mongoose.Schema.Types.ObjectId, default: mongoose.Types.ObjectId },
+  _id: { type: mongoose.Schema.Types.ObjectId, default: mongoose.Types.ObjectId },
   title: { type: String, required: true },
   creator: { type: String, required: true },
   originalBroadcaster: { type: String, required: true },
