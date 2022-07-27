@@ -351,6 +351,3 @@ Agradecimento ao meu esposo, minha família, a Jani, nossa facilitadora maravilh
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" /> <p align="center"></p>
-
-
- No futuro ainda pretendo desenvolver um espaço no banco de dados para divulgação de filmes clássicos, restaurantes, colunas, Instagram, Twitter e, quem sabe, LinkedIn de pessoas que falam sobre diversidade assim reunindo num só lugar informações que hoje em dia são essenciais, porém estão espalhadas.
