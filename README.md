@@ -25,12 +25,11 @@
 - [👩🏾‍💻 Tecnologias e Dependências Utilizadas](#-Tecnologias-e-Dependências-Utilizadas)
 - [👩🏾‍🔧 Instalação](#-Instalação)
 - [⚗️ Interface Gráfica Para Realizar os Testes](#-Interface-Gráfica-Para-Realizar-os-Testes)
-- [🔓 Interface Gráfica Para Realizar os Testes](#-Interface-Gráfica-Para-Realizar-os-Testes)
 - [🔓 Preparando o Ambiente Para Autenticação](#-Preparando-o-Ambiente-Para-Autenticação)
 - [🔐 Testando Rotas de Login e Rotas Com ou Sem Proteção](#-Testando-Rotas-de-Login-e-Rotas-Com-ou-Sem-Proteção)
 - [🧪 Teste Jest](#-Teste-Jest)
-- [🧪 Autora](#-Autora)
 - [🙋🏾‍♀️ Autora](#-Autora)
+
 
 <!--te-->
 
@@ -176,7 +175,7 @@ $ npm start
 <br>
 
 
-## ⚗️  Interface Gráfica Para Realizar os Testes
+## ⚗️ Interface Gráfica Para Realizar os Testes
 
 <br>
 
@@ -345,7 +344,7 @@ Agradecimento ao meu esposo, minha família, a Jani, nossa facilitadora maravilh
 </p>
 
 
-## 🙋🏾‍♀️  Autora
+## 🙋🏾‍♀️ Autora
 
 <br>
 
