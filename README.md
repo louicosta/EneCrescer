@@ -20,15 +20,15 @@
 
 <!--ts-->
 
-- [👧🏾 Objetivo](#-👧🏾-Objetivo)
-- [📁 Arquitetura do Projeto](#-📁-Arquitetura-do-Projeto)
-- [👩🏾‍💻 Tecnologias e Dependências Utilizadas](#-👩🏾‍💻-Tecnologias-e-Dependências-Utilizadas)
-- [👩🏾‍🔧 Instalação](#-👩🏾‍🔧-Instalação)
-- [⚗️ Interface Gráfica Para Realizar os Testes](#-⚗️-Interface-Gráfica-Para-Realizar-os-Testes)
-- [🔓 Preparando o Ambiente Para Autenticação](#-🔓-Preparando-o-Ambiente-Para-Autenticação)
-- [🔐 Testando Rotas de Login e Rotas Com ou Sem Proteção](#-🔐-Testando-Rotas-de-Login-e-Rotas-Com-ou-Sem-Proteção)
-- [🧪 Teste Jest](#-🧪-Teste-Jest)
-- [🙋🏾‍♀️ Autora](#-🙋🏾‍♀️-Autora)
+- [👧🏾 Objetivo](#-Objetivo)
+- [📁 Arquitetura do Projeto](#-Arquitetura-do-Projeto)
+- [👩🏾‍💻 Tecnologias e Dependências Utilizadas](#-Tecnologias-e-Dependências-Utilizadas)
+- [👩🏾‍🔧 Instalação](#-Instalação)
+- [⚗️ Interface Gráfica Para Realizar os Testes](#-Interface-Gráfica-Para-Realizar-os-Testes)
+- [🔓 Preparando o Ambiente Para Autenticação](#-Preparando-o-Ambiente-Para-Autenticação)
+- [🔐 Testando Rotas de Login e Rotas Com ou Sem Proteção](#-Testando-Rotas-de-Login-e-Rotas-Com-ou-Sem-Proteção)
+- [🧪 Teste Jest](#-Teste-Jest)
+- [🙋🏾‍♀️ Autora](#-Autora)
 
 <!--te-->
 
@@ -49,7 +49,7 @@ O objetivo desta API é criar um local para consulta com livros, filmes, séries
 
 <br>
 
-Lembre-se que a arquitetura ao final do projeto precisa ficar exatamente dessa maneira. Você pode visualizar meu `Swagger` [aqui](https://enecrescer.herokuapp.com/documentacao-enecrescer/#/).
+Lembre-se que a arquitetura ao final do projeto precisa ficar exatamente dessa maneira. 
 
 ```
  📁ENECRESCER
@@ -136,6 +136,13 @@ Lembre-se que a arquitetura ao final do projeto precisa ficar exatamente dessa m
 | `jest`| Jest é uma estrutura de teste JavaScript.|
 | `swagger`| Gera a documentação.|
 | `heroku`| hospeda a documentação.|
+
+<br>
+Link para a documentação:
+
+📝 [Swagger](https://enecrescer.herokuapp.com/documentacao-enecrescer/#/)
+
+📝 [Heroku](https://enecrescer.herokuapp.com/)
 
 <br>
 <br>
