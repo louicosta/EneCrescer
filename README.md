@@ -174,7 +174,7 @@ $ npm start
 <br>
 
 
-## ⚗️ Interface Gráfica Para Realizar os Testes
+## ⚗️  Interface Gráfica Para Realizar os Testes
 
 <br>
 
@@ -343,7 +343,7 @@ Agradecimento ao meu esposo, minha família, a Jani, nossa facilitadora maravilh
 </p>
 
 
-## 🙋🏾‍♀️ Autora
+## 🙋🏾‍♀️  Autora
 
 <br>
 
