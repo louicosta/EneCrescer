@@ -40,8 +40,12 @@
 
 <br>
 
-O objetivo desta API é criar um local para consulta com livros, filmes, séries e desenhos infanto-juvenis em que o protagonista ou um dos personagens principais sejam pessoas negras. Não somente consulta, mas que seja futuramente um espaço para divulgação de novos conteúdos voltados a pessoas negras como parte importante da construção de identidade de crianças e jovens que não sabem ou não veem divulgação de pessoas como elas.
-
+O objetivo desta API é criar um local para consulta com livros, filmes, séries e desenhos infanto-juvenis em que o protagonista ou co-protagonista sejam pessoas pretas ou pardas. Não somente consulta, mas que seja **futuramente** um espaço para divulgação de novos conteúdos voltados a pessoas pretas e pardas como parte importante da construção de identidade de crianças e jovens que não sabem ou não veem divulgação de pessoas como elas.
+<br>
+*Pra frente pretendo adicionar ao banco de dados livros, filmes séries e desenhos que possuam algum personagem protagonista ou co-protagonista que sejam da comunidade LGBTQIA+ para que cada dia mais crianças e adolescentes se sintam represetados de forma respeitosa.*
+<br>
+<br>
+**[Apresentação do Projeto Final](https://www.canva.com/design/DAFHj8kWcjA/Yi0PS80yV07ruJal9fStnQ/view?utm_content=DAFHj8kWcjA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**
 <br>
 <br>
 
